@@ -56,15 +56,13 @@ Unlike sampling methods (Monte Carlo Dropout, Ensemble MCMC) which require hundr
 
 3. **Data Uncertainty ($u_D$):** Propagates input measurement noise through network layers using the Hadamard matrix product ($M4 = M1 \circ M2 \circ M3$):
    - **$M1$ (Sensor Uncertainty):** Encodes input error variances $u^2(x_i)$ and cross-terms.
-   - **$M2$ (Model Sensitivity):** Contains squared and cross partial derivatives $ rac{\partial y}{\partial x_i}$ computed via automatic differentiation.
+   - **$M2$ (Model Sensitivity):** Contains squared and cross partial derivatives $ \frac{\partial y}{\partial x_i}$ computed via automatic differentiation.
    - **$M3$ (Correlation Matrix):** Captures temporal correlation $
-ho_{ij}$ between input lags.
+$\rho_{ij}$ between input lags.
 
    Summing all contributions in $M4$ alongside output measurement variance $u^2(y)$ yields:
 
-   $$u_D^2(v_0) = \sum_{i=1}^k \left(  rac{\partial y}{\partial x_i}(v_0) \cdot u(x_i) 
-ight)^2 + 2 \cdot \sum_{i=1}^{k-1} \sum_{j=i+1}^k \left(  rac{\partial y}{\partial x_i}(v_0) \cdot  rac{\partial y}{\partial x_j}(v_0) \cdot 	ext{cov}(x_i, x_j) 
-ight) + u^2(y)$$
+ $$u_D^2(v_0) = \sum_{i=1}^k \left( \frac{\partial y}{\partial x_i}(v_0) \cdot u(x_i) \right)^2 + 2 \cdot \sum_{i=1}^{k-1} \sum_{j=i+1}^k \left( \frac{\partial y}{\partial x_i}(v_0) \cdot \frac{\partial y}{\partial x_j}(v_0) \cdot \text{cov}(x_i, x_j) \right) + u^2(y)$$
 
 ### 95% Prediction Bands & Uncertainty Budget
 The expanded predictive uncertainty $U_P(v_0)$ applies a coverage factor $k_p = 1.96$ (for a 95% confidence level) and accounts for bias $SE$:
