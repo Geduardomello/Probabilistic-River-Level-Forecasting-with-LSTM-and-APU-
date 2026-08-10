@@ -52,7 +52,7 @@ Unlike sampling methods (Monte Carlo Dropout, Ensemble MCMC) which require hundr
 2. **Model Uncertainty ($u_M$):** Computed from training residuals, separating systematic error bias ($SE$) and random residual variance ($RE$):
    $$SE =  \frac{1}{n}\sum_{i=1}^n (F(x_i) - y_i)$$
    $$RE^2 =  \frac{1}{n}\sum_{i=1}^n \left[ (F(x_i) - y_i) - SE 
-ight]^2$$
+\right]^2$$
    $$u_M = RE$$
 
 3. **Data Uncertainty ($u_D$):** Propagates input measurement noise through network layers using the Hadamard matrix product ($M4 = M1 \circ M2 \circ M3$):
