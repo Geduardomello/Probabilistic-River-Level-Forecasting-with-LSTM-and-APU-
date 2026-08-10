@@ -248,18 +248,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Citation
 
-If you use this framework or APU methodology in your research, please cite our paper:
-
-```bibtex
-@article{mello2025probabilistic,
-  title={Probabilistic River Level Forecasting with LSTM and APU: a Confidence-Aware Deep Learning Framework Applied to the Sinos River},
-  author={de Mello, Gerson Eduardo and da Rosa Righi, Rodrigo and Cagliari, Joice},
-  journal={Applied Computing and Geosciences},
-  year={2025}
-}
-```
-
----
 
 ## Contact
 
