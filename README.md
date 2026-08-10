@@ -50,8 +50,8 @@ Unlike sampling methods (Monte Carlo Dropout, Ensemble MCMC) which require hundr
    $$u_P^2(v_0) = u_D^2(v_0) + u_M^2$$
 
 2. **Model Uncertainty ($u_M$):** Computed from training residuals, separating systematic error bias ($SE$) and random residual variance ($RE$):
-   $$SE =  rac{1}{n}\sum_{i=1}^n (F(x_i) - y_i)$$
-   $$RE^2 =  rac{1}{n}\sum_{i=1}^n \left[ (F(x_i) - y_i) - SE 
+   $$SE =  \frac{1}{n}\sum_{i=1}^n (F(x_i) - y_i)$$
+   $$RE^2 =  \frac{1}{n}\sum_{i=1}^n \left[ (F(x_i) - y_i) - SE 
 ight]^2$$
    $$u_M = RE$$
 
