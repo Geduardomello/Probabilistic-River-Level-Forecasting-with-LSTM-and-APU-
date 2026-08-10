@@ -73,7 +73,7 @@ The core operational innovation lies in converting APU confidence bands $[L_{t+h
 $$p_{t+h} = \mathbb{P}(Y_{t+h} \ge A) = 1 - \Phi\left(  rac{A - \mu_{t+h}}{\sigma_{t+h}} 
 ight), \quad 	ext{where } \sigma_{t+h}  pprox  rac{U_{t+h} - L_{t+h}}{2 \cdot 1.96}$$
 
-```
+```text
 Forecast Evolution (8h Ahead) with Triggers, Hysteresis and Risk Communication
       Water Level (cm)
        520 |                                   *---* [Emergency]
@@ -114,10 +114,10 @@ Below is the exact reproduction of the 8-hour lead-time ($t+8$) decision sequenc
 
 ## Methodology & Pipeline
 
-```
+```text
 +-----------------------------------------------------------------------------------+
 | PART I: DETERMINISTIC BASE                                                        |
-| Telemetric Sensors (15-min) -> Gap Filling -> MinMaxScaler -> Univariate LSTM    |
+| Telemetric Sensors (15-min) -> Gap Filling -> MinMaxScaler -> Univariate LSTM     |
 +-----------------------------------------------------------------------------------+
                                           |
                                           v
