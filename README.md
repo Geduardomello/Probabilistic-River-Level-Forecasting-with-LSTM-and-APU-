@@ -81,8 +81,7 @@ $$[L_{t+h}, U_{t+h}] = [\mu_{t+h} - U_P, \mu_{t+h} + U_P]$$
 
 The operational core translates prediction bands $[L_{t+h}, U_{t+h}]$ into exact exceedance probabilities $p_{t+h}$ relative to critical alert thresholds $A$ (e.g., $A = 480	ext{ cm}$):
 
-$$p_{t+h} = \mathbb{P}(Y_{t+h} \ge A) = 1 - \Phi\left(  rac{A - \mu_{t+h}}{\sigma_{t+h}} 
-ight), \quad 	ext{where } \sigma_{t+h}  pprox  rac{U_{t+h} - L_{t+h}}{2 \cdot 1.96}$$
+$$p_{t+h} = \mathbb{P}(Y_{t+h} \ge A) = 1 - \Phi\left( \frac{A - \mu_{t+h}}{\sigma_{t+h}} \right), \quad \text{where } \sigma_{t+h} \approx \frac{U_{t+h} - L_{t+h}}{2 \cdot 1.96}$$
 
 ```text
   River Stage (cm)
